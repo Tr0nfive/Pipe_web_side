@@ -6,20 +6,28 @@ import { Link, Route, Routes } from 'react-router-dom'
 
 import Login from './FuncComp/Login'
 import Sign_up from './FuncComp/Sign_up'
+import Store from './FuncComp/Store'
+import Nav from './Nav'
+import Cart from './FuncComp/Cart'
+import Lib from './FuncComp/UserLib'
 
-function App() {
+function App(props) {
 
 
   return (
     <>
 
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-          <Link to={"/"}>Login</Link>
-          <Link to={"/signUp"}>signUp</Link>
+          <Nav/>
+          {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
+          
 
+            
       <Routes>
         <Route path='/'element={<Login/>}/>
         <Route path='/signUp'element={<Sign_up/>}/>
+        <Route path='/store' element={<Store/>}/>
+        <Route path='/cart' element={<Cart/>}/>
+        <Route path='libary' element={<Lib/>}/>
       </Routes>
       
       
@@ -29,3 +37,4 @@ function App() {
 }
 
 export default App
+

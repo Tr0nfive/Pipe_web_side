@@ -3,9 +3,7 @@ text-align: center;
 padding-right: 28px;
 
 }
-#Email_log,#Pass_log{
-    
-}
+
 input[type=text],[type=password]{
     
     border: 3px solid #857bf4;
@@ -13,6 +11,73 @@ input[type=text],[type=password]{
     box-shadow: 0px 1px yellowgreen ;
     
 }
-#sign_up_btn{
-    margin-top: 25px;
+
+input[type=search]{
+    width: auto;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: gray;
+  background-image: url('');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 40px;
+  color: white;
+  
 }
+
+.navLink{
+    color: chartreuse;
+    padding: 5px;
+    display: inline-block;
+    
+    
+
+}
+
+#nav_grid{
+    display: grid;
+}
+#nav{
+    border: white solid 2px;
+   
+}
+.cart_delete{
+    color: red;
+    cursor: pointer;
+}
+
+.store-game-img{
+    width: 100px;
+    height: 150px;
+}
+
+#grid_store{
+display: grid;
+grid-template-columns: repeat(5,auto);
+grid-template-rows: auto auto auto;
+grid-template-areas:
+'headStore headStore headStore headStore headStore'
+'game game game game game'
+'game game game game game';
+row-gap: 5px;
+column-gap: 10px;
+
+}
+.store-game{
+    grid-area: 'game';
+}
+#store_h1{
+    grid-area: headStore;
+}
+.store-game-name{
+    white-space: pre-line;
+    
+}
+
+.cart_game_img{
+    width: 200px;
+    height: 250px;
+}
+

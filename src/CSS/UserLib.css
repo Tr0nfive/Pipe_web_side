@@ -1,0 +1,130 @@
+.lib{
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+    'lib-side lib-side lib-display lib-display lib-display'
+    'lib-side lib-side lib-display lib-display lib-display'
+    ;
+
+}
+.lib.null{
+    display: grid;
+    grid-template-columns: repeat(3,15%)repeat(2,100%);
+    grid-template-rows: repeat(2,auto);
+    grid-template-areas:
+    'lib-side lib-side lib-side . .'
+    'lib-side lib-side lib-side . .'  
+    ;
+
+}
+
+
+#lib-side-div{
+    grid-area: lib-side;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    grid-template-rows: auto  repeat(7,1fr);
+    grid-template-areas: 
+    'lib-search'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    ;
+    margin: 15px;
+    align-items: center;
+;
+row-gap: 5px;
+float: left;
+}
+
+
+#lib-side-div-select{
+    grid-area: lib-side;
+    display: grid;
+    grid-template-columns: 1fr;
+    
+    grid-template-rows: 3% repeat(7,8%); ;
+    grid-template-areas: 
+    'lib-search'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    'lib-game'
+    ;
+    margin: 15px;
+    align-items: center;
+;
+row-gap: 25px;
+float: left;
+}
+#lib-search-game{
+    grid-area: lib-search;
+    
+}
+#lib-game-display{
+    grid-area: lib-display;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas:
+    'lib-display-img'
+    'game-info-nav'
+    ;
+}
+#lib-game-display-img{
+    grid-area: lib-display-img;
+    max-width: 800px;
+    max-height: 400px;
+    width: 800px;
+    height: 400px;
+   
+    
+}
+#lib-game-display-name{
+    grid-area: lib-display-name;
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    color: orange;
+}
+#lib-game-display-nav{
+    grid-area: lib-display-nav;
+}
+.lib-game{
+    grid-area: 'lib-game';
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    "lib-side-img lib-side-name";
+    align-items: center;
+
+}
+.lib-side-img{
+grid-area: lib-side-img;
+max-width: 50px;
+max-height: 80px;
+width: 50px;
+height: 80px;
+float: left;
+}
+.lib-side-name{
+grid-area: lib-side-name;
+float: right;
+}
+#lib-game-display-cover{
+    position: relative;
+}
+#lib-game-display-nav{
+    grid-area: game-info-nav;
+
+}

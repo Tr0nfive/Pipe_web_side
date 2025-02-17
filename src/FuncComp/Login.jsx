@@ -1,41 +1,56 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState,useEffect } from 'react'
 import '../CSS/Login.css'
-import  { GlobalState } from '../Global'
+import { GlobalState } from '../Global'
+import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
-  const {CheckUser} =useContext(GlobalState)
-  const [Email,setEmail] = useState()
-  const [Pass,setPass] = useState()
+  const navigate = useNavigate()
+  const { CheckUser ,CourrentUser ,setCurUser} = useContext(GlobalState)
+  const [Email, setEmail] = useState()
+  const [Pass, setPass] = useState()
 
   const GetEmail = (em) => {
-    console.log('em.target.value', em.target.value)
+    
     setEmail(em.target.value)
-      console.log('Email', Email)
+   // console.log('Email', Email)
   }
   const GetPass = (pas) => {
-    console.log('pas.target.value', pas.target.value)
-    setPass(pas.target.value)
-    console.log('Pass', Pass)
     
-  }
-  const DoLogin=()=>{
+    setPass(pas.target.value)
+   
 
-    let flag=CheckUser(Email,Pass)
-    if(flag){
+  }
+  const DoLogin = event => {
+event.preventDefault ()
+    let flag = CheckUser(Email, Pass)
+    if (flag) {
       alert("alarm alarm")
+      setCurUser({email:Email,pass:Pass})
+      console.log('CourrentUser.email',CourrentUser )
+      navigate("/store")
     }
-    else alert ("incorct email or password")
+    else alert("incorct email or password")
     console.log('flag', flag)
   }
+
+  useEffect(() => {
+    console.log('CourrentUser.email',CourrentUser )
+    
+  }, [CourrentUser])
+  
+
   return (
     <div>
-        <h2>Login</h2><br/>
-        <span id="Email_span">Email:</span> <input type="text" id="Email_log"
-            onChange={GetEmail} />
-        <br/>
-        <span id='Pass_span'>Password:</span> <input type="Password" id="Pass_log" onChange={GetPass} />
-        <br/>
-        <button onClick={DoLogin}>Login</button>
+      <h2>Login</h2><br />
+      <form  >
+      
+      <span id="Email_span">Email:</span> <input type="text" id="Email_log"
+        onChange={GetEmail} />
+      <br />
+      <span id='Pass_span'>Password:</span> <input type="Password" id="Pass_log" onChange={GetPass} />
+      <br />
+      <button onClick={DoLogin}>Login</button>
+      </form>
     </div>
   )
 }
