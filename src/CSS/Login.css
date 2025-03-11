@@ -3,16 +3,93 @@ text-align: center;
 padding-right: 28px;
 
 }
-#Email_log,#Pass_log{
+
+.cart_delete{
+    color: red;
+    cursor: pointer;
+}
+
+.store-game-img{
+    width: 100px;
+    height: 150px;
+}
+
+#grid_store{
+display: grid;
+grid-template-columns: repeat(5,auto);
+grid-template-rows: auto auto auto;
+grid-template-areas:
+'headStore headStore headStore headStore headStore'
+'game game game game game'
+'game game game game game';
+row-gap: 5px;
+column-gap: 10px;
+
+}
+.store-game{
+    grid-area: 'game';
+}
+#store_h1{
+    grid-area: headStore;
+}
+.store-game-name{
+    white-space: pre-line;
     
 }
-input[type=text],[type=password]{
-    
-    border: 3px solid #857bf4;
+
+.cart_game_img{
+    width: 200px;
+    height: 250px;
+}
+
+
+#form_log input:focus ,select:focus{
+    border: 2px solid blue;
+    outline: none;
+}
+#form_log{
+    display: grid;
+    grid-template-columns: auto auto; 
+    grid-template-rows: repeat(2, auto); 
+    gap: 10px 20px; 
+    margin: auto; 
+    align-items: center;
+}
+
+#Log_Btn{
+padding: 10px;
+background-color: green;
+  color: white;
+  border: none;
+  cursor: pointer;
+  grid-row-start:2 ;
+    grid-row-end: 3;
+    grid-column-start: 0;
+    grid-column-end: 2;
+}
+
+#Log_Btn:hover{
+    background-color: blue;
+}
+
+#Email_span{
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 0;
+    grid-column-end: 1;
+}
+
+#Pass_span{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 0;
+    grid-column-end: 1;
+}
+
+#form_log input[type = "text"], #form_log input[type = "password"]{
+    width: 100%; 
+    padding: 5px;
+    border: 2px solid green;
     border-radius: 5px;
-    box-shadow: 0px 1px yellowgreen ;
-    
 }
-#sign_up_btn{
-    margin-top: 25px;
-}
+

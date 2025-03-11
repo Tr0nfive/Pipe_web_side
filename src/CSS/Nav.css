@@ -1,0 +1,38 @@
+
+
+
+
+
+.navLink{
+    color: chartreuse;
+    padding: 5px;
+    display: inline-block;
+    
+    
+
+}
+
+#nav_grid{
+    display: grid;
+}
+#nav{
+    
+    border: white solid 2px;
+   padding: 5px 0px;
+}
+
+
+#search_bar_store{
+    width: auto;
+  box-sizing: border-box;
+  border: 2px solid green;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: black;
+ 
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 6px 20px 6px 40px;
+  color: white;
+  
+}
