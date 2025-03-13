@@ -1,10 +1,9 @@
 import React, { useContext, useState,useEffect } from 'react'
-import React, { useContext, useState,useEffect } from 'react'
+
 import '../CSS/Login.css'
 import { GlobalState } from '../Global'
 import { useNavigate } from 'react-router-dom'
-import { GlobalState } from '../Global'
-import { useNavigate } from 'react-router-dom'
+
 
 export default function Login() {
   const navigate = useNavigate()
@@ -15,19 +14,11 @@ export default function Login() {
 
   const GetEmail = (em) => {
     
-    
     setEmail(em.target.value)
    // console.log('Email', Email)
-   // console.log('Email', Email)
   }
-  const GetPass = (pas) => {
-    
-    
+  const GetPass = (pas) => { 
     setPass(pas.target.value)
-   
-
-   
-
   }
 
   const DoLogin = event => {
