@@ -33,8 +33,8 @@ Users.forEach(element => {
 addEmail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)?flag=true:flag=false
 console.log('email_regex',addEmail,addEmail.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/)) 
 
-Addpass.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/)?flag=true:flag=false
-console.log('pass_regex', Addpass,Addpass.match(/^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)[A-Za-z\d]{8,}$/))
+Addpass.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/)?flag=true:flag=false
+console.log('pass_regex', Addpass,Addpass.match(/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/))
 if(!flag)
     return flag
 else {

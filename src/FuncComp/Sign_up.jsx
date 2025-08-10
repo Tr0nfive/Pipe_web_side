@@ -72,8 +72,7 @@ const {AddUser,Users} = useContext(GlobalState)
     <div className="password-tooltip">
       <p>Password must contain:</p>
       <ul>
-        <li> At least one uppercase letter (A-Z)</li>
-        <li> At least one lowercase letter (a-z)</li>
+        <li> At least one  letter (a-z,A-Z)</li>
         <li> At least one digit (0-9)</li>
         <li> Minimum 8 characters in length</li>
       </ul>
